@@ -1,0 +1,2 @@
+com.camaratek.extension.dao.DaoImplV2
+com.camaratek.metier.impl.MetierImpl

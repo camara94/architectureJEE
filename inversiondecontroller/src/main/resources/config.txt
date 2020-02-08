@@ -1,0 +1,2 @@
+com.camaratek.dao.impl.IdaoImpl
+com.camaratek.metier.impl.MetierImpl
