@@ -26,14 +26,14 @@ public class Presentation {
 		
 		 
 		try {
-			Scanner scanner = new Scanner(new BufferedReader(new FileReader("src/config.txt")));
+			Scanner scanner = new Scanner(new BufferedReader(new FileReader("src/main/resources/config.txt")));
 			String daoClassName = scanner.next();
 			String metierClassName = scanner.next();
 			//System.out.println( daoClassName + " \n" + metierClassName );
 			
 			Class cDao = Class.forName(daoClassName);
 			Idao dao = (Idao) cDao.newInstance();
-			//System.out.println( dao.getValue() );
+			System.out.println( dao.getValue() );
 			
 			Class cMetier = Class.forName(metierClassName);
 			IMetier metier =(MetierImpl) cMetier.newInstance();
@@ -41,7 +41,7 @@ public class Presentation {
 			Method m1 = cMetier.getMethod("setIdao", new Class [] { Idao.class });
 			m1.invoke(metier, new Object[] {dao} );
 			
-			System.out.println( metier.calcul() );
+			System.out.println( metier.puis() );
 			
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block

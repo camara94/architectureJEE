@@ -20,5 +20,12 @@ public class MetierImpl implements IMetier {
 		
 		return nb*10;
 	}
+	
+	public double puis() {
+		
+		double nb = idao.getValue();
+		
+		return nb*nb;
+	}
 
 }
